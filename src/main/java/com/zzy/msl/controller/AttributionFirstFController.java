@@ -24,6 +24,6 @@ public class AttributionFirstFController {
 
     @RequestMapping(path = "/testPage")
     public IPage<AttributionFirstF> testPage() {
-        return attributionFirstFService.getAttributionFirstFByPage(1l, 100l);
+        return attributionFirstFService.getAttributionFirstFByPage();
     }
 }
