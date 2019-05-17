@@ -4,12 +4,13 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zzy.msl.domain.adv.AttributionFirstF;
 
 @Mapper
-public interface AttributionFirstFDao {
+public interface AttributionFirstFDao  extends BaseMapper<AttributionFirstF>{
     
-    List<AttributionFirstF> select();
+//    List<AttributionFirstF> select();
 
 
 }
