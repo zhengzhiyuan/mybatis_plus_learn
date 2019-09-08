@@ -8,9 +8,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zzy.msl.domain.adv.AttributionFirstF;
 
 @Mapper
-public interface AttributionFirstFDao  extends BaseMapper<AttributionFirstF>{
-    
-//    List<AttributionFirstF> select();
-
+public interface AttributionFirstFDao extends BaseMapper<AttributionFirstF> {
 
 }
