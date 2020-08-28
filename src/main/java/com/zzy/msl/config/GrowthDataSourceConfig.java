@@ -15,6 +15,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import com.baomidou.mybatisplus.core.MybatisConfiguration;
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -37,6 +38,10 @@ public class GrowthDataSourceConfig {
         MybatisConfiguration configuration = new MybatisConfiguration();
         configuration.setMapUnderscoreToCamelCase(true);
         configuration.setCallSettersOnNulls(true);
+
+        // 分页支持
+        PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
+        configuration.addInterceptor(paginationInterceptor);
         bean.setConfiguration(configuration);
         return bean.getObject();
     }
